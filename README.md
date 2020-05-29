@@ -3,9 +3,9 @@ YOU CAN ALSO USE A PROPER .MD VISOR TO READ IT OR CONVERT TO PDF -->
 
 # Backtraking Algorithm for Sudoku
 
-*Laboratory 1, Introduction to Artificial Intelligence*
+*Laboratory 2, Introduction to Artificial Intelligence*
 
-This is the first **laboratory work** of the **Introduction to Artificial Intelligence** 2020 course in the Computer Science program from **Politechnika Wrocławska** University.
+This is the second **laboratory work** of the **Introduction to Artificial Intelligence** 2020 course in the Computer Science program from **Politechnika Wrocławska** University.
 
 The objective is getting familiar with Constraints Satisfaction Problems and Backtracking Algorithm. And test its performance solving the *Sudoku* problems. 
 
