@@ -32,9 +32,12 @@ Diferents sudoku problems are saved on the data files: `Sudoku9.csv` `Sudoku16.c
 This class is responsible of store and deal with the sudoku grid and the methods necessary to implement Backtracking.
 
 ### Main function :       `SudokuSolver.cpp`
-Starts and checks the computation time by solving all the problems contained in
+Starts and checks the computation time by solving all the problems contained in:
+
 `Sudoku9.csv`	46 problems of 9×9, diferent difficulties
+
 `Sudoku16.csv` 	1 problem of 16×16.
+
 `Sudoku25.csv` 	1 problem of 25×25.
 
 In addition to these the program can solve any N×N sudoku. Where N is a perfect square.
