@@ -47,20 +47,20 @@ int main () {
 	cout << "Time in µs: "<<duration_g<<endl<<endl<<endl;
 
 
-	cout << "---------------------------------------" << endl;
-	cout << "Sudoku 25x25 experiment" <<endl;
-	Sudoku sudoku25(25);
-	sudoku25.readFromFileMatrix("Sudoku25.csv");
-	cout << "Initial status:" << endl;
-	cout << sudoku25 << endl;
-	t1_g = std::chrono::high_resolution_clock::now();
-	if(sudoku25.solveSudoku_Backtraking())
-		cout << "Solution found: \n" << sudoku25 <<endl;
-	else
-		cout << "No solution for that problem." <<endl;
-    t2_g = std::chrono::high_resolution_clock::now();
-    duration_g = std::chrono::duration_cast<std::chrono::microseconds>( t2_g - t1_g ).count();
-	cout << "Time in µs: "<<duration_g<<endl<<endl<<endl;
+//	cout << "---------------------------------------" << endl;
+//	cout << "Sudoku 25x25 experiment" <<endl;
+//	Sudoku sudoku25(25);
+//	sudoku25.readFromFileMatrix("Sudoku25.csv");
+//	cout << "Initial status:" << endl;
+//	cout << sudoku25 << endl;
+//	t1_g = std::chrono::high_resolution_clock::now();
+//	if(sudoku25.solveSudoku_Backtraking())
+//		cout << "Solution found: \n" << sudoku25 <<endl;
+//	else
+//		cout << "No solution for that problem." <<endl;
+//    t2_g = std::chrono::high_resolution_clock::now();
+//    duration_g = std::chrono::duration_cast<std::chrono::microseconds>( t2_g - t1_g ).count();
+//	cout << "Time in µs: "<<duration_g<<endl<<endl<<endl;
 } 
 
 

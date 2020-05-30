@@ -13,10 +13,13 @@ class Sudoku {
 private:
 	int* grid;			// Sudoku board. It is dealed as two dimensional but actually is one dimensional array in order to get better performance. 
 	int size;
-	
+	// Returns a unassigned location by the parameters
 	const bool findUnassignedLocation(int &row, int &col);
+	// Check if the number already exists in the row: 
 	bool checkRow(int row, int num);
+	// Check if the number already exists in the column: 
 	bool checkCol(int col, int num);
+	// Check if the number already exists in the box(subgrid): 
 	bool checkBox(int row, int col, int num);
 public:
 	Sudoku(const int& size);
@@ -29,11 +32,8 @@ public:
 	void readFromFileMatrix(const string& fileName);
  	// Use Backtracking Algorithm to solve the Sudoku;	
  	bool solveSudoku_Backtraking();
- 	//Show
+ 	// Clear the screen and show the updated grid.
  	const void showUpdate();
-	// Testing methods
-	void fillRandom();
-	void oneRandom();
 };
 
 Sudoku::Sudoku(const int& size) {
@@ -97,14 +97,6 @@ void Sudoku::readFromFileMatrix(const string& fileName) {
 		}
 	}
 }
-
-void Sudoku::fillRandom() {
-	for(int i=0; i<size; i++)
-		for(int j=0; j<size; j++)
-			grid[(i*size) + j] = rand()%10;
-}
-
-void Sudoku::oneRandom() { grid[rand()%(size*size)] = rand()%10; }
 
 bool Sudoku::checkRow(int row, int num) {
 	for(int col=0; col<size; col++)
