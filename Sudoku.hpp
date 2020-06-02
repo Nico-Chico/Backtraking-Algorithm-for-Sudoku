@@ -73,12 +73,16 @@ void Sudoku::readFromFile(const string& fileName, int id) {
 	}
 	id = stoi(tokens[0]);
 	int difficulty = stoi(tokens[1]);
+	int empty_cells = 0;
 	string& data = tokens[2];	
-	for(int i=0; i<size*size; i++) {	// load initial status
-		data[i] == '.' ? grid[i] = 0 : (grid[i] = data[i] - '0');	// if it's '.' set 0, else set the char translate to int;
+	for(int i=0; i<size*size; i++) {	// load initial status 
+		if(data[i] == '.') { 	// if it's '.' set 0, else set the char translate to int;
+			grid[i] = 0;
+			empty_cells++;
+		} else grid[i] = data[i] - '0';
 	}	
 	
-	cout <<"Initial status loaded from file: '"<<fileName<<"' | id: "<<id<<" | difficulty: "<<difficulty<< endl;
+	cout <<"Initial status loaded from file: '"<<fileName<<"' | id: "<<id<<" | difficulty: "<<difficulty<<" | Empty cells: "<<empty_cells<< endl;
 }
 
 void Sudoku::readFromFileMatrix(const string& fileName) {
