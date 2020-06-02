@@ -47,6 +47,28 @@ However, as we will see in the experiments, from 25x25 the computation time of t
 
 N can be changed on the `main.cpp`
 
+## Formulating the problem.
+For the sake of simplicity, I'll explain the problem by assuming a classic 9x9 Sudoku grid.
+The numbers that we will place on the grid must belong to the interval [1, 9].
+In addition, in order to meet our goal, we will have to address a number of constraints. We can model them as the following 3.
+
+1. All the numbers in the range [1, 9] should appear in one row. Therefore none of these numbers will appear twice on the same line. Since we have 9 different numbers and exactly 9 places to put them.
+
+        [ 1 4 6 5 3 2 8 9 7 ] ✅ 
+        
+        [ 2 4 5 6 3 3 2 1 1 ] ❌
+
+2. All the numbers in the range [1, 9] should appear in one column. Therefore none of these numbers will appear twice on the same column.
+3. All the numbers in the range [1, 9] should appear in each subgrid of 3x3 results from dividing our 9x9 grid into 9 subgrids of 3x3. 
+
+These three restrictions are reflected in the checkRow(), checkCol() and checkBox() methods of the Sudoku class respectively.
+```c++
+	bool checkRow(int row, int num); // Check if the number already exists in the row: 
+	bool checkCol(int col, int num); // Check if the number already exists in the column: 
+	bool checkBox(int row, int col, int num); 	// Check if the number already exists in the box(subgrid): 
+
+```
+
 ## Experiment, analysis & conclusions:
 *Work in progress*
 
