@@ -48,7 +48,7 @@ However, as we will see in the experiments, from 25x25 the computation time of t
 N can be changed on the `main.cpp`
 
 ## Formulating the problem.
-For the sake of simplicity, I'll explain the problem by assuming a classic 9x9 Sudoku grid.
+For the sake of simplicity, I'll explain the problem by assuming a classic 9x9 Sudoku grid. 
 The numbers that we will place on the grid must belong to the interval [1, 9].
 In addition, in order to meet our goal, we will have to address a number of constraints. We can model them as the following 3.
 
@@ -63,11 +63,25 @@ In addition, in order to meet our goal, we will have to address a number of cons
 
 These three restrictions are reflected in the checkRow(), checkCol() and checkBox() methods of the Sudoku class respectively.
 ```c++
-	bool checkRow(int row, int num); // Check if the number already exists in the row: 
-	bool checkCol(int col, int num); // Check if the number already exists in the column: 
+	bool checkRow(int row, int num);            // Check if the number already exists in the row: 
+	bool checkCol(int col, int num);            // Check if the number already exists in the column: 
 	bool checkBox(int row, int col, int num); 	// Check if the number already exists in the box(subgrid): 
 
 ```
+
+This can be extended to a Sudoku of N×N but we must keep in mind that N must be a perfect square in order for the forms and properties of the Sudoku to be maintained.
+Then we only have to change the domain of our values of [1, N].
+Therefore the possible Sudokus would be:
+
+        2² -> 4×4
+        3² -> 9×9
+        4² -> 16×16 
+        5² -> 25×25
+        6² -> 36×36
+        7² -> 49×49
+        ...
+
+
 
 ## Experiment, analysis & conclusions:
 *Work in progress*
