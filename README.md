@@ -84,7 +84,7 @@ Therefore the possible Sudokus would be:
 
 
 ## Experiment, analysis & conclusions:
-*Work in progress*
+See `/experiments` directory and `experiments.ods` file.
 
 ---
  Project by: **Nicolás Magro Cruzado** | [GitLab](https://gitlab.com/Nico_Chico) ⌨️
