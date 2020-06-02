@@ -160,6 +160,6 @@ const void Sudoku::showUpdate() {
 		}
 		cout << "\n";
 	}
-//	usleep(10000);
+	usleep(60000);
 }
 
